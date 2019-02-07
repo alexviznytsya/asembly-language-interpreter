@@ -1,0 +1,38 @@
+ALI CPU and Memory dump created on: Sat May  5 17:04:04 2018
+
+
+Content of CPU memory:
+    PC:          25
+    Register A:  480                 Overflow Bit: 0    
+    Register B:  12                  Zero Bit:     1    
+
+Content of 256 words memory:
+    Address:        Instruction:   
+       0                40         
+       1                12         
+       2                480        
+       3                4294967284 
+       4                LDI 40     
+       5                ST X       
+       6                LDI 12     
+       7                ST Y       
+       8                LDI 0      
+       9                ST Z       
+       10               ST C       
+       11               LDA Z      
+       12               LDB X      
+       13               ADD        
+       14               ST Z       
+       15               LDI -1     
+       16               LDB C      
+       17               ADD        
+       18               ST C       
+       19               LDB Y      
+       20               ADD        
+       21               JZS 23     
+       22               JMP 11     
+       23               LDA Z      
+       24               HLT        
+
+***The rest 231 instructions are empty.
+
