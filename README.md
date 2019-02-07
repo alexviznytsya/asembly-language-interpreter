@@ -16,18 +16,18 @@ The computer hardware uses 32-bit words and consists of the following components
 5. **A zero-result bit**. This bit is set if the last ADD instruction produced a zero result. This bit is cleared if the last ADD instruction produced a result different from zero. The initial value is zero. The bit is changed only after ADD instructions are executed.
 6. **An overflow bit**. This bit is set whenever an ADD instruction produces an overflow (i.e., a result that cannot be stored in 2’s complement notation with 32 bits). It is cleared if the ADD instruction did not produce an overflow. The initial value is zero.
 
-The registers are used to hold data in arithmetic operations (i.e., additions). The program counter holds the index value (starting at 0) of the next instruction to be executed. SAL has the instruction set shown in table:
+The registers are used to hold data in arithmetic operations (i.e., additions). The program counter holds the index value (starting at 0) of the next instruction to be executed. SAL has the instruction set shown in table:  
 | SAL Command | Description |
 | :---------: | ------------|
-| **DEC** _symbol_ | Declares a symbolic variable consisting of a single letter (e.g., X ). The variable is stored at the memory location of this instruction. |
-| **LDA** _symbol_ | Loads byte at data memory address of symbol into the accumulator. |
-| **LDB** _symbol_ | Loads byte at data memory address symbol into B. |
-| **LDI** _value_ | Loads the integer value into the accumulator register. The value could be negative but must be in the range of 32-bit 2’s complement numbers. |
-| **ST** _symbol_ | Stores content of accumulator into data memory at address of symbol. |
-| **XCH** | Exchanges the content of registers A and B. |
-| **JMP** _number_ | Transfers control to instruction at address number in program memory. |
-| **JZS**  _number_ | Transfers control to instruction at address number if the zero-result bit is set. |
-| **JVS** _number_ | Transfers control to instruction at address number if the overflow bit is set. |
+| **DEC** *symbol* | Declares a symbolic variable consisting of a single letter (e.g., X ). The variable is stored at the memory location of this instruction. |
+| **LDA** *symbol* | Loads byte at data memory address of symbol into the accumulator. |
+| **LDB** *symbol* | Loads byte at data memory address symbol into B. |
+| **LDI** *value* | Loads the integer value into the accumulator register. The value could be negative but must be in the range of 32-bit 2’s complement numbers. |
+| **ST** *symbol* | Stores content of accumulator into data memory at address of symbol. |
+| **XCH** | Exchanges the content of registers A and B.|
+| **JMP** *number* | Transfers control to instruction at address number in program memory. |
+| **JZS** *number* | Transfers control to instruction at address number if the zero-result bit is set. |
+| **JVS** *number* | Transfers control to instruction at address number if the overflow bit is set. |
 | **ADD** | Adds the content of registers A and B. The sum is stored in A. The overflow and zero-result bits are set or cleared as needed. |
 | **HLT** | Terminates program execution. |
 
