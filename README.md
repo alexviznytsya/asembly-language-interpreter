@@ -17,8 +17,8 @@ The computer hardware uses 32-bit words and consists of the following components
 6. **An overflow bit**. This bit is set whenever an ADD instruction produces an overflow (i.e., a result that cannot be stored in 2’s complement notation with 32 bits). It is cleared if the ADD instruction did not produce an overflow. The initial value is zero.
 
 The registers are used to hold data in arithmetic operations (i.e., additions). The program counter holds the index value (starting at 0) of the next instruction to be executed. SAL has the instruction set shown in table:
-| SAL Command | Description |
-| :---------: | ------------|
+|SAL Command|Description|
+|:---------:|-----------|
 | **DEC** *symbol* | Declares a symbolic variable consisting of a single letter (e.g., X ). The variable is stored at the memory location of this instruction. |
 | **LDA** *symbol* | Loads byte at data memory address of symbol into the accumulator. |
 | **LDB** *symbol* | Loads byte at data memory address symbol into B. |
